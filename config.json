@@ -1,0 +1,4 @@
+{
+    "nvd_url": "https://services.nvd.nist.gov/rest/json/cves/1.0?resultsPerPage=5",
+    "vulndb_url": "https://vulndb.com/api/vulnerabilities"
+}
