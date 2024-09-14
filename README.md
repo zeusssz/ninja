@@ -41,8 +41,8 @@ Before using Raven, you need to install several dependencies. Follow these steps
      ```
    - Alternatively, you can [download and install Z3 from GitHub](https://github.com/Z3Prover/z3).
 
-   >[!NOTE]  
-   > Make sure Z3 is properly installed and accessible in your system's `PATH`.
+>[!NOTE]  
+   Make sure Z3 is properly installed and accessible in your system's `PATH`.
 
 2. **cURL Library**
    - **Installation**:
@@ -86,8 +86,8 @@ Before using Raven, you need to install several dependencies. Follow these steps
    make
    ```
 
-   >[!WARNING]  
-   > Ensure that Z3 and cURL are correctly installed and configured. Missing dependencies will result in build failure.
+>[!WARNING]  
+> Ensure that Z3 and cURL are correctly installed and configured. Missing dependencies will result in build failure.
 
 ---
 
