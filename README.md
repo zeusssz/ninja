@@ -1,4 +1,5 @@
-## Ninja - Vulnerability Detection Tool
+![image](https://github.com/user-attachments/assets/c3945f79-b331-4914-85b5-0d434af3a00d)
+# Ninja
 
 Ninja is a high-performance vulnerability detection tool written in C++. It integrates with the Z3 Theorem Prover for symbolic execution and cURL for fetching vulnerability data from APIs like the National Vulnerability Database (NVD).
 
