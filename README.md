@@ -24,7 +24,7 @@ Raven is a high-performance vulnerability detection tool written in C++. It inte
 3. [Configuration](#configuration)
 4. [API Integration](#api-integration)
 5. [Development](#development)
-6. [License](#license)
+6. [Licensing](#license)
 
 ---
 
@@ -41,8 +41,8 @@ Before using Raven, you need to install several dependencies. Follow these steps
      ```
    - Alternatively, you can [download and install Z3 from GitHub](https://github.com/Z3Prover/z3).
 
->[!NOTE]  
-   Make sure Z3 is properly installed and accessible in your system's `PATH`.
+   > [!NOTE]  
+   > Make sure Z3 is properly installed and accessible in your system's `PATH`.
 
 2. **cURL Library**
    - **Installation**:
@@ -86,7 +86,7 @@ Before using Raven, you need to install several dependencies. Follow these steps
    make
    ```
 
->[!WARNING]  
+> [!WARNING]  
 > Ensure that Z3 and cURL are correctly installed and configured. Missing dependencies will result in build failure.
 
 ---
@@ -105,7 +105,7 @@ You can specify options like file paths or APIs for vulnerability detection:
 ./Raven --file <source-code-path> --api <nvd-api-url>
 ```
 
->[!INFORMATION]  
+> [!INFORMATION]  
 > By default, Raven performs static analysis. You can extend it to dynamic analysis by using the `--dynamic` flag.
 
 ---
@@ -123,7 +123,7 @@ To configure Raven for different vulnerability databases, update the configurati
 }
 ```
 
->[!NOTE]  
+> [!NOTE]  
 > Make sure to keep your API keys secure and avoid committing them to public repositories.
 
 ---
@@ -138,7 +138,7 @@ Raven fetches real-time vulnerability data using the **cURL** library. By defaul
 2. Update the `config.json` file with your API URL and key.
 3. Run Raven to fetch and analyze the latest vulnerabilities.
 
->[!WARNING]  
+> [!WARNING]  
 > Excessive API requests might result in rate limiting. Use caching mechanisms or avoid frequent calls in production environments.
 
 ---
