@@ -1,20 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
-project(Raven)
 
+project(Raven VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
-
-include_directories(include)
-include_directories(include/external_libs/nlohmann)
-include_directories(include/external_libs/z3)
-include_directories(include/external_libs/curl)
-
-add_executable(Raven
-    src/main.cpp
-    src/analysis.cpp
-    src/api_client.cpp
-    src/utils.cpp
-)
-
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+include_directories(${PROJECT_SOURCE_DIR}/dependencies)
+add_executable(raven main.cpp)
 find_package(CURL REQUIRED)
+target_include_directories(raven PRIVATE ${CURL_INCLUDE_DIRS})
+target_link_libraries(raven PRIVATE ${CURL_LIBRARIES})
 find_package(Z3 REQUIRED)
-target_link_libraries(Raven PRIVATE CURL::libcurl Z3::libz3)
+target_include_directories(raven PRIVATE ${Z3_INCLUDE_DIRS})
+target_link_libraries(raven PRIVATE ${Z3_LIBRARIES})
+find_package(nlohmann_json REQUIRED)
+target_link_libraries(raven PRIVATE nlohmann_json::nlohmann_json)
+set(JSON_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/dependencies)
+set(Z3_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/dependencies/z3)
+set(CURL_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/dependencies/curl)
+target_link_libraries(raven PRIVATE ${Z3_LIBRARIES})
+target_link_libraries(raven PRIVATE ${CURL_LIBRARIES})
