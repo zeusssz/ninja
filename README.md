@@ -1,6 +1,6 @@
-## Raven - Vulnerability Detection Tool
+## Ninja - Vulnerability Detection Tool
 
-Raven is a high-performance vulnerability detection tool written in C++. It integrates with the Z3 Theorem Prover for symbolic execution and cURL for fetching vulnerability data from APIs like the National Vulnerability Database (NVD).
+Ninja is a high-performance vulnerability detection tool written in C++. It integrates with the Z3 Theorem Prover for symbolic execution and cURL for fetching vulnerability data from APIs like the National Vulnerability Database (NVD).
 
 ---
 
@@ -30,7 +30,7 @@ Raven is a high-performance vulnerability detection tool written in C++. It inte
 
 ### Installation
 
-Before using Raven, you need to install several dependencies. Follow these steps to set up your environment.
+Before using Ninja, you need to install several dependencies. Follow these steps to set up your environment.
 
 #### Dependencies
 
@@ -61,7 +61,7 @@ Before using Raven, you need to install several dependencies. Follow these steps
        GIT_TAG v3.9.1
      )
      FetchContent_MakeAvailable(json)
-     target_link_libraries(Raven PRIVATE nlohmann_json::nlohmann_json)
+     target_link_libraries(Ninja PRIVATE nlohmann_json::nlohmann_json)
      ```
 
 4. **CMake**
@@ -74,8 +74,8 @@ Before using Raven, you need to install several dependencies. Follow these steps
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/zeusssz/raven.git
-   cd raven
+   git clone https://github.com/zeusssz/Ninja.git
+   cd Ninja
    ```
 
 2. Build the project:
@@ -93,26 +93,26 @@ Before using Raven, you need to install several dependencies. Follow these steps
 
 ### Usage
 
-Once Raven is installed, you can run the application by executing the following command in the build directory:
+Once Ninja is installed, you can run the application by executing the following command in the build directory:
 
 ```bash
-./Raven
+./Ninja
 ```
 
 You can specify options like file paths or APIs for vulnerability detection:
 
 ```bash
-./Raven --file <source-code-path> --api <nvd-api-url>
+./Ninja --file <source-code-path> --api <nvd-api-url>
 ```
 
 > [!INFORMATION]  
-> By default, Raven performs static analysis. You can extend it to dynamic analysis by using the `--dynamic` flag.
+> By default, Ninja performs static analysis. You can extend it to dynamic analysis by using the `--dynamic` flag.
 
 ---
 
 ### Configuration
 
-To configure Raven for different vulnerability databases, update the configuration file at `config.json`.
+To configure Ninja for different vulnerability databases, update the configuration file at `config.json`.
 
 #### Example Configuration:
 
@@ -130,13 +130,13 @@ To configure Raven for different vulnerability databases, update the configurati
 
 ### API Integration
 
-Raven fetches real-time vulnerability data using the **cURL** library. By default, it integrates with the National Vulnerability Database (NVD).
+Ninja fetches real-time vulnerability data using the **cURL** library. By default, it integrates with the National Vulnerability Database (NVD).
 
 #### NVD Integration
 
 1. Ensure you have an NVD API key.
-2. Update the `config.json` file with your API URL and key.
-3. Run Raven to fetch and analyze the latest vulnerabilities.
+2. Update the `main.cpp` file with your API URL and key.
+3. Run Ninja to fetch and analyze the latest vulnerabilities.
 
 > [!WARNING]  
 > Excessive API requests might result in rate limiting. Use caching mechanisms or avoid frequent calls in production environments.
@@ -145,7 +145,7 @@ Raven fetches real-time vulnerability data using the **cURL** library. By defaul
 
 ### Development
 
-Feel free to contribute to Raven. Before submitting a pull request, ensure that:
+Feel free to contribute to Ninja. Before submitting a pull request, ensure that:
 
 - Your code follows the project’s coding standards.
 - The project builds and runs correctly with no errors.
@@ -155,4 +155,4 @@ Feel free to contribute to Raven. Before submitting a pull request, ensure that:
 
 ### License
 
-Raven is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Ninja is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
