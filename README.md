@@ -42,8 +42,8 @@ Before using Ninja, you need to install several dependencies. Follow these steps
      ```
    - Alternatively, you can [download and install Z3 from GitHub](https://github.com/Z3Prover/z3).
 
-   > [!NOTE]  
-   > Make sure Z3 is properly installed and accessible in your system's `PATH`.
+>[!NOTE]  
+>Make sure Z3 is properly installed and accessible in your system's `PATH`.
 
 2. **cURL Library**
    - **Installation**:
